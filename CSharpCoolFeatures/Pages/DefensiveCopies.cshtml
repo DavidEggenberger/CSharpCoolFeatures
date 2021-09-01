@@ -1,0 +1,17 @@
+﻿@page
+@model CSharpCoolFeatures.Pages.DefensiveCopiesModel
+@{
+}
+
+<h2>Defensive Copies</h2>
+
+<h3>@Model.valueType.ToString()</h3>
+
+<h4>
+    They get created to @("\"secure\"") readonly structs. Why is this only the case with structs?
+    When a reference type is marked as readonly this ensures only that its reference is not changed
+    We can still change the values of its members such as fields and properties. When a struct is readonly it has to be enforced
+    its value stays the same. That means that this has to be enforced. The compiler warns us when want to change the value
+    of its fields or properties and prohibts us to do it. But we can call methods and properties that internally could change the value of the struct.
+    Therefore a defensive copy is created to prohibt this. 
+</h4>
