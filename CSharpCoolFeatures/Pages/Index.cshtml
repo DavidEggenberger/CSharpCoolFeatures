@@ -6,11 +6,11 @@
 
 <div class="text-center">
     <h1 class="display-4">Welcome! Demonstrating various cool C# Features</h1>
-    <ul style="list-style-type: none;">
+    <ul class="list-group">
         @foreach (var item in typeof(IndexModel).Assembly.GetTypes().Where(s => typeof(ICSharpMarker).IsAssignableFrom(s) && s != typeof(ICSharpMarker)))
         {
             string name = item.Name.Substring(0, item.Name.Length - "Model".Length);
-            <li><a asp-page="/@name">@name</a></li>         
+            <li class="list-group-item"><a asp-page="/@name">@name</a></li>         
         }
     </ul>   
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>

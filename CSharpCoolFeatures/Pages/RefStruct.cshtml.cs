@@ -9,12 +9,14 @@ namespace CSharpCoolFeatures.Pages
 {
     public class RefStructModel : PageModel, ICSharpMarker
     {
+        //Struct structt; => not possible => would mean allocation on the heap
         public void OnGet()
         {
+            Struct canOnlyBeAllocatedOnTheStack = new Struct();
         }
-        private ref struct ICanOnlyBeAllocatedOnTheStack
+        public ref struct Struct
         {
-
+            public int Property { get; set; }
         }
     }
 }
