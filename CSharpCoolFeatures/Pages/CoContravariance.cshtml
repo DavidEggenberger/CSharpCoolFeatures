@@ -1,0 +1,17 @@
+﻿@page
+@model CSharpCoolFeatures.Pages.CoContravarianceModel
+@{
+}
+
+<h2>Co/Contravariance</h2>
+
+<h4>
+    Only interface and delegate type paramters can be specified as variant. 
+    Covariance means that when a Base Type is expected also a Sub Type can be used.
+    Contravariance means that when a Sub Type is expected also its Base Type can be used.
+    As said this only works with type parameters of interfaces and delegates though. Because they
+    act as a wrapper around the actual object. Parameters can be marked with In. That means that also interfaces
+    or delegates can be referenced that have the same method defined with sub types. Out is used to
+    mark return types and means that also delegates and objects can be referenced that return an object
+    that is a sub type of the initially defined one.
+</h4>
