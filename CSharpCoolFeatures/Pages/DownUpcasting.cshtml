@@ -1,0 +1,14 @@
+﻿@page
+@model CSharpCoolFeatures.Pages.DownUpcastingModel
+@{
+}
+
+<h2>Upcasting/Downcasting</h2>
+
+<h4>
+    Upcasting => taking a reference of a Base Type to store an object of a Sub Type
+    Downcasting => taking a reference of a Derived Type to store an object of a Base Type
+    Upcasts can happen implicitly while Downcasts need to be marked as an explicit cast by using () quotes
+    to indicate the Derived Type the Base Type has to be downcasted too. Downcasts can throw an InvalidCastException
+    when the cast is invalid. The compiler enforces that Upcasts do always work.
+</h4>
